@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <title>Game</title>
+</head>
+<body class="bg-gray-800 text-white">
+  <div class="w-full h-screen flex justify-center items-center">
+    <a href="/" class="block bg-black absolute top-5 border-[2px] text-red-600 border-red-600 rounded-[15px] py-1 hover:scale-125 duration-300 w-[150px] text-center red-shadow text-[22px]">Log Out</a>
+    <div class="w-[70%] h-[80vh] border-black border-[2px] bg-black text-white flex rounded-[10px]">
+
+      <div class="w-[50%] h-full border-r-[2px] p-5 border-white">
+        <div class="flex justify-between">
+          <h2 class="text-3xl rounded-[15px] h-[50px] w-[150px] text-center p-[2px] shadoww border-[2px] border-white">Player 1</h2>
+          <span id="player1Score" class="text-3xl rounded-[15px] h-[50px] w-[150px] text-center p-[2px] shadoww border-[2px] border-white">Score 0</span>
+        </div>
+        <h3 id="player1RandomNumber" class="text-[130px] text-center mt-[150px]">0</h3>
+        <button id="player1Button" class="border-[2px] border-white mx-auto block w-[150px] rounded-[15px] py-1 hover:scale-125 duration-300 shadoww text-[22px] mt-[100px]">
+          Click
+        </button>
+      </div>
+
+      <div class="w-[50%] h-full p-5">
+        <div class="flex justify-between">
+          <h2 class="text-3xl rounded-[15px] h-[50px] w-[150px] text-center p-[2px] shadoww border-[2px] border-white">Player 2</h2>
+          <span id="player2Score" class="text-3xl rounded-[15px] h-[50px] w-[150px] text-center p-[2px] shadoww border-[2px] border-white">Score 0</span>
+        </div>
+        <h3 id="player2RandomNumber" class="text-[130px] text-center mt-[150px]">0</h3>
+        <button id="player2Button" class="border-[2px] border-white mx-auto block w-[150px] rounded-[15px] py-1 hover:scale-125 duration-300 shadoww text-[22px] mt-[100px]" disabled>
+          Click
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center">
+    <div class="bg-white w-[300px] text-center text-green-500 p-10 rounded">
+      <h2 id="winnerText" class="text-3xl mb-5">Winner!</h2>
+      <div class="flex justify-center">
+        <button id="restartButton" class="bg-green-500 text-white py-2 px-4 rounded">Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

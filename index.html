@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-800 text-white gif">
+    <div class="w-full h-screen flex justify-center items-center">
+      <a href="/playing.html" class="block border-[2px] border-green-500 rounded-[15px] py-1 hover:scale-125 duration-300 w-[150px] text-green-500 text-center green-shadow text-[22px] bg-black">Play Game</a>
+    </div>
+</body>
+</html>

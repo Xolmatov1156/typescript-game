@@ -1,0 +1,23 @@
+.regular {
+    font-family: "Gamja Flower", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.shadoww {
+    box-shadow: rgb(255, 255, 255) 0px 5px 15px;
+}
+
+.red-shadow {
+  box-shadow: rgb(206, 41, 41) 0px 5px 15px;
+}
+.green-shadow {
+  box-shadow: rgb(25, 185, 75) 0px 5px 15px;
+}
+
+.gif {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
